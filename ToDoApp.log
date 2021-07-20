@@ -1,0 +1,7 @@
+INFO:sanic.root:Goin' Fast @ http://localhost:8888
+DEBUG:sanic.root:Sanic auto-reload: enabled
+DEBUG:sanic.root:Sanic debug mode: enabled
+INFO:ToDoApp:App has started
+DEBUG:aioredis:Creating tcp connection to ('localhost', 6379)
+INFO:sanic.root:Starting worker [23852]
+INFO:sanic.access:
