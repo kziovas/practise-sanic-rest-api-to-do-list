@@ -4,6 +4,7 @@ This is an attempt to practise various technologies, tools and design patterns b
 A miniature python microservices app is build. 
 
 Methodologies used:
+ - REST API architecture
  - Dependency injection
  - Singleton classes 
  - Class composition (instead of class inheritance)
