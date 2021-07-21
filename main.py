@@ -17,7 +17,7 @@ def main():
     create_list_controller(list_controller,sanic_app)
 
     sanic_app.register_listener(app.run, "before_server_start")
-    sanic_app.register_listener(app.initialize_redis_client, "before_server_start")
+    sanic_app.register_listener(app.initialize, "before_server_start")
 
     APP_HOST=os.environ.get("APP_HOST")
     APP_PORT = os.environ.get("APP_PORT")

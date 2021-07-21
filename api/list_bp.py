@@ -18,8 +18,8 @@ class ListController:
             task_list_ids=task_list_id_dict["task_list_ids"]
         else:
             task_list_ids={"task_list_ids":[]}
-
-        await self.list_service.add_user_list(user_id, task_list_ids)
+        
+        await self.list_service.add_to_list(user_id, task_list_ids)
 
     async def add_task_list(self, task_list_id, task_list_dict : dict):
         if (task_list_dict):
@@ -27,14 +27,14 @@ class ListController:
         else:
             task_list={"task_list":[]}
 
-        await self.list_service.add_task_list(task_list_id, task_list)
+        await self.list_service.add_to_list(task_list_id, task_list)
 
     async def get_user_list(self, pattern : str = "*") -> list:
-        user_lists= await self.list_service.get_user_lists(pattern)
+        user_lists= await self.list_service.get_all_lists_by_pattern(pattern)
         return user_lists
 
     async def get_task_list(self, pattern : str = "*") -> list:
-        task_lists= await self.list_service.get_task_lists(pattern)
+        task_lists= await self.list_service.get_all_lists_by_pattern(pattern)
         return task_lists
 
     async def get_user_task_list(self, user_id : str, user_id_pattern : str, task_list_id : str, task_list_id_pattern : str) -> dict:

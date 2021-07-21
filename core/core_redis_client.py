@@ -46,28 +46,4 @@ class CoreRedisClient:
     
     async def remove_by_key(self, key : str):
         await self.client.delete(key)
-
-    async def add_to_list(self, key : str, list_single : list):
-        await self.client.lpush(key,*list_single)
     
-    async def get_all_lists(self, pattern : str = "*") -> dict:
-        cur = b'0'
-
-        keys=[]
-        while cur:
-            cur, key = await self.client.scan(cur, match=pattern)
-            keys.extend(key)
-
-        result_dict={}
-        for key in keys:
-            results_binary = await self.client.lrange(key,0,-1)
-
-            results=[]
-            for result_binary in results_binary:
-                results.append(result_binary.decode('ascii'))
-
-            key_decoded = key.decode('ascii')
-            result_dict.update({key_decoded:results})
-
-        return result_dict
-

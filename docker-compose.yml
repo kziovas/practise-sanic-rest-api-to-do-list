@@ -10,9 +10,22 @@ services:
             - APP_PORT=8888
             - REDIS_HOST=redis
             - REDIS_PORT=6379
+            - RABBITMQ_HOST=rabbitmq
+            - RABBITMQ_PUBLISHER_QUEUE_NAME=todopublisher
+        depends_on :
+            - redis
+            - rabbitmq
 
     redis:
         image: "redis:alpine"
         hostname: redis
         ports:
             - 6379:6379
+    
+    rabbitmq:
+        image: rabbitmq:3-management-alpine
+        container_name: 'rabbitmq'
+        hostname: rabbitmq
+        ports:
+            - 5672:5672
+            - 15672:15672

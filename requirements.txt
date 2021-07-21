@@ -6,6 +6,7 @@ httptools==0.2.0
 injector==0.18.4
 msgpack==1.0.2
 multidict==5.1.0
+pika==1.2.0
 redis==3.5.3
 sanic==21.6.0
 sanic-routing==0.7.0
