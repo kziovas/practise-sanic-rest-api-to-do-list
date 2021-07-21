@@ -8,6 +8,7 @@ Methodologies used:
  - Dependency injection
  - Singleton classes 
  - Class composition (instead of class inheritance)
+ - Pub-Sub messaging
 
 Tools used :
   - Python 3
@@ -15,4 +16,5 @@ Tools used :
   - Injector
   - Redis
   - Docker
+  - RabbitMQ
 
