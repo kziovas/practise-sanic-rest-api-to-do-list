@@ -9,6 +9,7 @@ Methodologies used:
  - Singleton classes 
  - Class composition (instead of class inheritance)
  - Pub-Sub messaging
+ - Containerization of apps and services
 
 Tools used :
   - Python 3
