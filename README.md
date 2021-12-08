@@ -1,5 +1,5 @@
-# todolist-practise
-An attempt to practise various technologies, tools and design patterns by building a simple "To Do List" app.
+# Practise Sanic REST API - To_Do_List
+The project is meant to be a starting point, an experimentation or a basic example of a way to develop an API with Sanic microframework. It is an exercise on using SAnic and various python technologies and design methodologies.
 
 A miniature python microservices app is build. 
 
